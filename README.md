@@ -6,7 +6,7 @@ Dompdf
 [![Total Downloads](https://poser.pugx.org/dompdf/dompdf/downloads.png)](https://packagist.org/packages/dompdf/dompdf)
 [![Latest Unstable Version](https://poser.pugx.org/dompdf/dompdf/v/unstable.png)](https://packagist.org/packages/dompdf/dompdf)
 [![License](https://poser.pugx.org/dompdf/dompdf/license.png)](https://packagist.org/packages/dompdf/dompdf)
- 
+
 **Dompdf is an HTML to PDF converter**
 
 At its heart, dompdf is (mostly) a [CSS 2.1](http://www.w3.org/TR/CSS2/) compliant
@@ -15,7 +15,7 @@ it will download and read external stylesheets, inline style tags, and the style
 attributes of individual HTML elements. It also supports most presentational
 HTML attributes.
 
-*This document applies to the latest stable code which may not reflect the current 
+*This document applies to the latest stable code which may not reflect the current
 release. For released code please
 [navigate to the appropriate tag](https://github.com/dompdf/dompdf/tags).*
 
@@ -25,10 +25,37 @@ release. For released code please
 question on [StackOverflow](http://stackoverflow.com/questions/tagged/dompdf) or
 on the [Google Groups](http://groups.google.com/group/dompdf).**
 
-Follow us on [![Twitter](http://twitter-badges.s3.amazonaws.com/twitter-a.png)](http://www.twitter.com/dompdf) or 
+Follow us on [![Twitter](http://twitter-badges.s3.amazonaws.com/twitter-a.png)](http://www.twitter.com/dompdf) or
 [![Follow us on Google+](https://ssl.gstatic.com/images/icons/gplus-16.png)](https://plus.google.com/108710008521858993320?prsrc=3).
 
 ---
+
+
+## Arabic support
+
+### Install ar-php with composer
+
+This change requires [ar-php](http://www.ar-php.org/), package simply require it's
+composer warper.
+
+```bash
+composer require ar-php/ar-php
+```
+### Include this dompdf version
+
+add this package to you composer
+```bash
+    "repositories": {
+        "dompdf": {
+            "type": "vcs",
+            "url": "https://github.com/mbdwey/dompdf/"
+        }
+    },
+```
+### Change dompdf veriosn
+```bash
+"dompdf/dompdf": "dev-arabic",
+```
 
 
 
@@ -45,7 +72,7 @@ Follow us on [![Twitter](http://twitter-badges.s3.amazonaws.com/twitter-a.png)](
  * No dependencies on external PDF libraries, thanks to the R&OS PDF class
  * Inline PHP support
  * Basic SVG support
- 
+
 ## Requirements
 
  * PHP version 5.4.0 or higher
@@ -197,7 +224,7 @@ See [Dompdf\Options](src/Options.php) for a list of available options.
 
  * Dompdf is not particularly tolerant to poorly-formed HTML input. To avoid
    any unexpected rendering issues you should either enable the built-in HTML5
-   parser at runtime (`$dompdf->set_option('isHtml5ParserEnabled', true);`) 
+   parser at runtime (`$dompdf->set_option('isHtml5ParserEnabled', true);`)
    or run your HTML through a HTML validator/cleaner (such as
    [Tidy](http://tidy.sourceforge.net) or the
    [W3C Markup Validation Service](http://validator.w3.org)).
