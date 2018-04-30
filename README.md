@@ -57,8 +57,17 @@ add this package to you composer
 "dompdf/dompdf": "dev-arabic",
 ```
 
-
-
+### Using supprted font
+ http://www.mediafire.com/download/wggzhazjqre7a3g/DINNextLTArabic-Medium.zip
+ 
+```code
+@font-face {
+    font-family: 'DINNextLTArabic-Medium';
+    src: url('DINNextLTArabic-Medium.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+```
 ## Features
 
  * Handles most CSS 2.1 and a few CSS3 properties, including @import, @media &
